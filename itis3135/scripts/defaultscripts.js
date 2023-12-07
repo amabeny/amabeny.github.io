@@ -20,7 +20,7 @@ function submitUserInput() {
 
 function showColor() {
     const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
-    displayResult(`Random Color: ${randomColor}`);
+    alert(`Random Color: ${randomColor}`);
 }
 
 function showQuote() {
@@ -29,7 +29,7 @@ function showQuote() {
         "I was gratified to be able to answer promptly. I said I don't know. -Mark Twain" 
     ];
     const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-    displayResult(`Random Quote: ${randomQuote}`);
+    alert(`Random Quote: ${randomQuote}`);
 }
 
 function showCompliment() {
@@ -38,7 +38,7 @@ function showCompliment() {
         "you're beautiful inside and out."
     ];
     const randomCompliment = compliments[Math.floor(Math.random() * compliments.length)];
-    displayResult(`Compliment: ${randomCompliment}`);
+    alert(`Compliment: ${randomCompliment}`);
 }
 
 function showInsult() {
@@ -47,7 +47,7 @@ function showInsult() {
         "booooooo!!!!!"
     ];
     const randomInsult = insults[Math.floor(Math.random() * insults.length)];
-    displayResult(`Insult: ${randomInsult}`);
+    alert(`Insult: ${randomInsult}`);
 }
 
 function showPolygon() {
