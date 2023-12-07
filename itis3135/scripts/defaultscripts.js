@@ -1,5 +1,3 @@
-
-
 function submitUserInput() {
     const userName = document.getElementById('userName').value;
     const userMood = document.getElementById('userMood').value;
@@ -17,10 +15,14 @@ function submitUserInput() {
         alert("Please enter a valid positive number.");
     }
 }
-
+function displayResult(result) {
+    const resultElement = document.getElementById('result');
+    resultElement.textContent = result;
+    alert(result);
+}
 function showColor() {
     const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
-    alert(`Random Color: ${randomColor}`);
+    displayResult(`Random Color: ${randomColor}`);
 }
 
 function showQuote() {
@@ -29,7 +31,7 @@ function showQuote() {
         "I was gratified to be able to answer promptly. I said I don't know. -Mark Twain" 
     ];
     const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-    alert(`Random Quote: ${randomQuote}`);
+    displayResult(`Random Quote: ${randomQuote}`);
 }
 
 function showCompliment() {
@@ -38,7 +40,7 @@ function showCompliment() {
         "you're beautiful inside and out."
     ];
     const randomCompliment = compliments[Math.floor(Math.random() * compliments.length)];
-    alert(`Compliment: ${randomCompliment}`);
+    displayResult(`Compliment: ${randomCompliment}`);
 }
 
 function showInsult() {
@@ -47,9 +49,8 @@ function showInsult() {
         "booooooo!!!!!"
     ];
     const randomInsult = insults[Math.floor(Math.random() * insults.length)];
-    alert(`Insult: ${randomInsult}`);
+    displayResult(`Insult: ${randomInsult}`);
 }
-
 function showPolygon() {
     const userNumber = parseInt(prompt("Enter your favorite number (0 to 10):"));
     if (isNaN(userNumber) || userNumber < 0) {
@@ -59,21 +60,5 @@ function showPolygon() {
         const polygonName = polygonNames[Math.min(userNumber, polygonNames.length - 1)];
         displayResult(`Your favorite polygon based on the number ${userNumber} is a ${polygonName}.`);
     }
-}
-
-function displayUserInfo() {
-    const now = new Date();
-    const dayOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][now.getDay()];
-    const formattedDate = `${now.getHours()}:${now.getMinutes()} ${dayOfWeek}, ${now.getDate()} ${now.toLocaleDateString('en-US', { month: 'long' })} ${now.getFullYear()}`;
-    
-    const userName = prompt("Enter your name:");
-    const userMood = prompt("How are you feeling today?");
-    
-    document.getElementById('userInfo').textContent = `Today is ${formattedDate}. Welcome, ${userName}! We're glad you are doing ${userMood}!`;
-}
-
-function displayResult(result) {
-    // Assuming you have an element with the ID 'result' to display the output
-    document.getElementById('result').textContent = result;
 }
 
