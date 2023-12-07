@@ -1,0 +1,65 @@
+
+
+body {
+    background-color: rgb(255, 188, 226);
+  }
+  
+  h1, h2, p {
+    color: rgb(18, 0, 0);
+    text-align: center;
+  }
+  
+  p {
+    font-family: verdana;
+    font-size: 20px;
+  }
+  table, th, td
+{    
+    border: 3px solid black;
+}
+a {
+  color: rgb(4, 38, 105);
+  text-decoration: none; 
+}
+a:visited {
+  color: blue;
+}
+
+a:hover {
+  color: blue;
+}
+
+a:active {
+  color: blue;
+}
+body {
+  background-color: rgb(255, 188, 226);
+}
+      table {
+          border-collapse: collapse;
+          width: 100%;
+          margin-top: 20px;
+      }
+
+      th, td {
+          border: 1px solid #ddd;
+          padding: 8px;
+          text-align: left;
+      }
+      th {
+          background-color: rgb(255, 255, 255); 
+          color: rgb(5, 30, 72);
+      }
+
+      tr:nth-child(even) {
+          background-color: #f2f2f2;
+      }
+      tr:hover {
+          background-color:  rgb(134, 201, 184);
+      }
+
+      caption {
+          caption-side: top;
+          font-weight: bold;
+          margin-bottom: 10px;
+      }
